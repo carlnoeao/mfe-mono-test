@@ -1,3 +1,6 @@
 [submodule "packages/mfe_template"]
 	path = packages/mfe_template
 	url = https://github.com/carlnoeao/mfe_template.git
+[submodule "Intranet"]
+	path = Intranet
+	url = https://github.com/AlphaOmega-AM-Solutions/Intranet
