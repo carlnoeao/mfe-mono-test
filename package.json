@@ -6,5 +6,10 @@
   ],
   "devDependencies": {
     "lerna": "^6.6.1"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start": "lerna run start --parallel",
+    "intranet": "cd Intranet && .\\mvnw spring-boot:run"
   }
 }

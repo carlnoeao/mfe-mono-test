@@ -1,8 +1,21 @@
 {
   "packages": [
+    "Intranet",
     "packages/*"
   ],
-  "version": "0.0.0",
+  "version": "independent",
   "npmClient": "npm",
-  "useWorkspaces": true
+  "command": {
+    "bootstrap": {
+      "hoist": true,
+      "nohoist": [
+        "**/webpack*",
+        "**/babel-loader",
+        "**/react*",
+        "**/typescript",
+        "**/eslint",
+        "**/prettier"
+      ]
+    }
+  }
 }
