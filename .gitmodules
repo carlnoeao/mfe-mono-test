@@ -1,0 +1,3 @@
+[submodule "packages/mfe_template"]
+	path = packages/mfe_template
+	url = https://github.com/carlnoeao/mfe_template.git
