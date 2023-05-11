@@ -1,4 +1,8 @@
+const fs = require('fs');
 const path = require('path');
+
+const packagesDir = path.resolve(__dirname, './packages');
+const packagesSubDirs = fs.readdirSync(packagesDir).map(dir => path.join(packagesDir, dir));
 
 module.exports = {
   extends: [
@@ -23,8 +27,7 @@ module.exports = {
     'react/jsx-uses-react': ['off'],
     'react/jsx-props-no-spreading': ['warn'],
     'react/no-unescaped-entities': ['off'],
-    'import/no-extraneous-dependencies': ['off'],
+    'import/no-extraneous-dependencies': ['error', { packageDir: [__dirname, ...packagesSubDirs] }],
     'prettier/prettier': ['off'],
   },
 };
-
