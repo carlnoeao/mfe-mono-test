@@ -1,0 +1,14 @@
+# Ignore the configuration file itself
+.eslintrc.js
+
+# Ignore node_modules
+**/node_modules/*
+
+# Ignore build files
+**/build/*
+
+# Ignore git files
+**/.git/*
+
+# Ignore Husky files
+**/.husky/*
