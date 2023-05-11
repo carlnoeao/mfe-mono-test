@@ -1,0 +1,16 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+
+# Check if branch name follows the convention
+if ! [[ "$BRANCH_NAME" =~ ^(feature|bugfix|hotfix|migration|release)_[a-z0-9_]+$|^dev$|^master$|^preprod$|^production$ ]]; then
+  echo "Error: Branch name does not follow the convention (type_short_description)"
+  echo "Allowed types: feature, bugfix, hotfix, migration, release"
+  echo "To change the branch name, use: git branch -m type_new_name"
+  exit 1
+fi
+
+# Run lint and format scripts
+npm run lint || exit 1
+npm run format || exit 1

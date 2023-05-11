@@ -59,6 +59,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "html-webpack-plugin": "^5.5.1",
+    "husky": "^8.0.3",
     "lerna": "^6.6.1",
     "prettier": "^2.8.8",
     "style-loader": "^3.3.1",
@@ -71,7 +72,11 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "start": "lerna run start --parallel",
-    "intranet": "cd Intranet && .\\mvnw spring-boot:run"
+    "prepare-all": "lerna run prepare && husky install",
+    "start-all": "lerna run start --parallel",
+    "lint-all": "lerna run lint",
+    "lint-all:fix": "lerna run lint:fix",
+    "build-all": "lerna run build --parallel",
+    "format-all": "lerna run format"
   }
 }
