@@ -1,6 +1,3 @@
-[submodule "Intranet"]
-	path = Intranet
-	url = https://github.com/AlphaOmega-AM-Solutions/Intranet
 [submodule "packages/shared"]
 	path = packages/shared
 	url = https://github.com/carlnoeao/shared.git

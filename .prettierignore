@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Except .ts(x) files
+!*.ts*
+
+# Check subdirs
+!*/
