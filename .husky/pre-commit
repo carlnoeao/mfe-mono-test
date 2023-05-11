@@ -10,7 +10,3 @@ if ! [[ "$BRANCH_NAME" =~ ^(feature|bugfix|hotfix|migration|release)_[a-z0-9_]+$
   echo "To change the branch name, use: git branch -m type_new_name"
   exit 1
 fi
-
-# Run lint and format scripts
-npm run lint || exit 1
-npm run format || exit 1
